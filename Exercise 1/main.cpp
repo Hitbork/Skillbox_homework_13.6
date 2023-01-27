@@ -2,8 +2,8 @@
 #include <vector>
 
 // Function to delete number from vector
-std::vector<int> delete_number(std::vector<int> vec, int n) {
-    int size = vec.size(), temp;
+void delete_number(std::vector<int> &vec, int n) {
+    int size = vec.size();
 
     for (int i = size - 1; i > -1; i--) {
         if ((vec[i] == n) && (i == vec.size() - 1)) {
@@ -15,8 +15,6 @@ std::vector<int> delete_number(std::vector<int> vec, int n) {
             vec.pop_back();
         }
     }
-
-    return vec;
 }
 
 
@@ -49,7 +47,7 @@ int main() {
 
 
     // Deleting number
-    numbers = delete_number(numbers, deleteNumber);
+    delete_number(numbers, deleteNumber);
 
 
     // Outputing vector
