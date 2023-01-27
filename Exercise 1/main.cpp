@@ -2,7 +2,7 @@
 #include <vector>
 
 // Function to delete number from vector
-void delete_number(std::vector<int> &vec, int n) {
+void delete_number(std::vector<int> &vec, int &n) {
     int size = vec.size();
 
     for (int i = size - 1; i > -1; i--) {
@@ -38,16 +38,18 @@ int main() {
 
 
     // Quering number to delete
-    int deleteNumber;
+    {
+        int deleteNumber;
 
-    std::cout << "Input a number to delete:\n";
-    std::cin >> deleteNumber;
+        std::cout << "Input a number to delete:\n";
+        std::cin >> deleteNumber;
 
-    std::cout << "\n";
+        std::cout << "\n";
 
 
-    // Deleting number
-    delete_number(numbers, deleteNumber);
+        // Deleting number
+        delete_number(numbers, deleteNumber);
+    }
 
 
     // Outputing vector
